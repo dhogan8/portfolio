@@ -1,0 +1,88 @@
+@import '../styles/variables.scss';
+
+.bar {
+  background: linear-gradient(to right, var(--pink), var(--orange));
+  height: 10px;
+  left: 0;
+  position: fixed;
+  top: 0;
+}
+
+.nav {
+  align-items: center;
+  background-color: var(--white);
+  display: grid;
+  grid-template-areas: 'logo menu';
+  grid-template-columns: max-content 1fr;
+  height: 40px;
+  margin-top: 10px;
+  padding: 20px 50px;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 100;
+}
+
+.list {
+  align-self: center;
+  display: flex;
+  gap: 20px;
+  justify-content: flex-end;
+  margin: 0;
+}
+
+.item {
+  font-weight: 800;
+  list-style-type: none;
+  text-transform: uppercase;
+
+  a {
+    border-bottom: 3px solid transparent;
+    color: var(--black);
+    text-decoration: none;
+  }
+
+  a:hover {
+    border-image: linear-gradient(to right, var(--pink), var(--orange)) 1;
+  }
+}
+
+.logoWrapper {
+  background-clip: content-box, border-box;
+  background-origin: border-box;
+  border: double 3px transparent;
+  border-radius: 10px;
+  background-image: linear-gradient(var(--white), var(--white)), linear-gradient(to right, var(--pink), var(--orange));
+
+  &:hover {
+    background-image: linear-gradient(to right, var(--pink), var(--orange)), linear-gradient(to right, var(--pink), var(--orange));
+    cursor: pointer;
+  }
+}
+
+.logo {
+  caret-color: rgba(0, 0, 0, 0);
+  color: var(--black);
+  cursor: pointer;
+  font-size: 24px;
+  font-weight: 600;
+  padding: 2px 8px;
+  z-index: 100;
+}
+
+.logoWrapper:hover .logo {
+  color: var(--white);
+  cursor: pointer;
+}
+
+.active {
+  border-image: linear-gradient(to right, var(--pink), var(--orange)) 1;
+}
+
+@media only screen and (min-width: 400px) {
+  .logo {
+    font-size: 30px;
+    font-weight: 800;
+  }
+}
