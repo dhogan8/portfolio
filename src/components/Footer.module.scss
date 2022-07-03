@@ -1,9 +1,41 @@
+@import '../styles/global.scss';
+
 .copyright {
+  color: var(--mute-gray);
   font-size: 14px;
   justify-self: center;
   margin-bottom: 20px;
 }
 
-footer {
+.footer {
+  background-color: var(--primary-text-color);
+  color: var(--white);
   display: grid;
+  justify-content: center;
+  height: 80px;
+  padding: 40px;
+}
+
+svg {
+  color: var(--white);
+  height: 40px;
+  margin-bottom: 10px;
+  transition: all 0.1s ease-in-out;
+  width: 40px;
+
+  &:hover {
+    color: rgba(255, 255, 255, 0.8);
+  }
+}
+
+.icons {
+  display: grid;
+  gap: 10px;
+  grid-template-areas: 'a b c';
+  max-width: 200px;
+  place-items: center;
+
+  a {
+    border-bottom: none;
+  }
 }

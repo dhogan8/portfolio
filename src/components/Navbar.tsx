@@ -1,21 +1,9 @@
 import React, { useEffect } from 'react';
+import logo from './logo512.png'
 
 import styles from './Navbar.module.scss';
 
 const Navbar = () => {
-
-  useEffect(() => {
-    const logo = document.getElementById('logo') as HTMLElement;
-    const goToTop = () => {
-      window.scrollTo(0, 0);
-    };
-
-    logo.addEventListener('click', goToTop);
-
-    return () => {
-      logo.removeEventListener('click', goToTop);
-    };
-  }, []);
 
   useEffect(() => {
     const progressBar = document.getElementById('bar') as HTMLDivElement;
@@ -45,7 +33,9 @@ const Navbar = () => {
       <div id='bar' className={styles.bar} />
       <nav id='nav' className={styles.nav}>
         <div id='logo' className={styles.logoWrapper}>
-          <div className={styles.logo}>d</div>
+          <a href='#'>
+            <img className={styles.logo} src={logo} />
+          </a>
         </div>
         <div className={styles.list}>
           <span className={styles.item}>

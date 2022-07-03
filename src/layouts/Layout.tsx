@@ -5,6 +5,7 @@ import Contact from '../pages/Contact';
 import Footer from '../components/Footer';
 import Intro from '../pages/Intro';
 import Navbar from '../components/Navbar';
+import ScrollButton from '../components/ScrollButton';
 
 const Layout = () => {
   return (
@@ -13,6 +14,7 @@ const Layout = () => {
       <Intro />
       <About />
       <Contact />
+      <ScrollButton />
       <Footer />
     </>
   )

@@ -1,83 +1,101 @@
-@import '../styles/variables.scss';
+@import '../styles/global.scss';
 
-body {
-  background-color: var(--background-color);
-  color: var(--white);
-  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
-.intro {
+.container {
   justify-content: center;
   align-items: center;
   display: flex;
   height: 100vh;
   margin: auto;
   margin-top: 50px;
+  position: relative;
   text-align: center;
-  max-width: 500px;
 }
 
-hr {
-  background: linear-gradient(to right, var(--pink), var(--orange));
-  border: 0;
-  height: 2px;
-  max-width: 300px;
+.intro {
+  animation: fadeInAnimation ease 2.5s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  background-attachment: fixed;
+  background-color: #E5E5E5;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 2 1'%3E%3Cdefs%3E%3ClinearGradient id='a' gradientUnits='userSpaceOnUse' x1='0' x2='0' y1='0' y2='1' gradientTransform='rotate(360,0.5,0.5)'%3E%3Cstop offset='0' stop-color='%23E5E5E5'/%3E%3Cstop offset='1' stop-color='%23F5F5F5'/%3E%3C/linearGradient%3E%3ClinearGradient id='b' gradientUnits='userSpaceOnUse' x1='0' y1='0' x2='0' y2='1' gradientTransform='rotate(360,0.5,0.5)'%3E%3Cstop offset='0' stop-color='%23FFFFFF' stop-opacity='0'/%3E%3Cstop offset='1' stop-color='%23FFFFFF' stop-opacity='1'/%3E%3C/linearGradient%3E%3ClinearGradient id='c' gradientUnits='userSpaceOnUse' x1='0' y1='0' x2='2' y2='2' gradientTransform='rotate(360,0.5,0.5)'%3E%3Cstop offset='0' stop-color='%23FFFFFF' stop-opacity='0'/%3E%3Cstop offset='1' stop-color='%23FFFFFF' stop-opacity='1'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect x='0' y='0' fill='url(%23a)' width='2' height='1'/%3E%3Cg fill-opacity='0.5'%3E%3Cpolygon fill='url(%23b)' points='0 1 0 0 2 0'/%3E%3Cpolygon fill='url(%23c)' points='2 1 2 0 0 0'/%3E%3C/g%3E%3C/svg%3E");
+  /* background by SVGBackgrounds.com */
+  background-position: center;
+  background-size: cover;
 }
 
 .heroWrapper{
-  background-clip: content-box, border-box;
-  background-origin: border-box;
   border: double 5px transparent;
-  border-radius: 10px;
-  background-image: linear-gradient(var(--background-color), var(--background-color)), linear-gradient(to right, var(--pink), var(--orange));
 }
 
 .hero {
   padding: 30px;
 }
 
+
 .heroName {
-  font-size: 48px;
+  font-size: 50px;
   font-weight: 700;
+  letter-spacing: .10em;
+  text-transform: uppercase;
 }
 
 .heroTitle {
-  background-color: var(--white);
-  color: var(--background-color);
+  background: linear-gradient(to right, var(--pink), var(--orange));
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  color: var(--white);
   font-size: 20px;
   font-weight: 800;
   letter-spacing: 0.20em;
-  margin-top: 16px;
+  margin-top: 20px;
   padding: 5px;
   text-transform: uppercase;
 }
 
-.icons {
-  display: grid;
-  grid-template-areas: "a b c";
-  justify-content: space-evenly;
-  margin-top: 40px;
+.down { 
+  bottom: 10%;
+  left: 50%;
+  position: absolute;
+
+  a {
+    border-bottom: 0;
+  }
+
+  svg {
+    color: var(--primary-text-color);
+    height: 40px;
+    top: 0;
+    transition: all 0.1s ease-in-out;
+    position: relative;
+    width: 40px;
+
+    &:hover {
+      top: 5px;
+    }
+  }
 }
 
-.icon svg {
-  color: var(--white);
-  height: 40px;
-  top: 0;
-  transition: all .1s ease-in-out;
-  position: relative;
-  width: 40px;
-}
+@media only screen and (min-width: 720px) {
+  .heroName {
+    font-size: 75px;
+  }
 
-svg:hover {
-  top: -5px;
+  .heroTitle {
+    font-size: 30px;
+  }
 }
 
 @media only screen and (min-width: 400px) {
-  .intro {
+ .intro {
     margin-top: 0;
   }
 }

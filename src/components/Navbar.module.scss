@@ -1,4 +1,4 @@
-@import '../styles/variables.scss';
+@import '../styles/global.scss';
 
 .bar {
   background: linear-gradient(to right, var(--pink), var(--orange));
@@ -6,17 +6,19 @@
   left: 0;
   position: fixed;
   top: 0;
+  z-index: 100;
 }
 
 .nav {
   align-items: center;
   background-color: var(--white);
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   display: grid;
   grid-template-areas: 'logo menu';
   grid-template-columns: max-content 1fr;
   height: 40px;
   margin-top: 10px;
-  padding: 20px 50px;
+  padding: 20px;
   position: fixed;
   left: 0;
   right: 0;
@@ -27,13 +29,15 @@
 .list {
   align-self: center;
   display: flex;
+  font-family: var(--heading-text);
   gap: 20px;
   justify-content: flex-end;
   margin: 0;
 }
 
 .item {
-  font-weight: 800;
+  caret-color: rgba(0, 0, 0, 0);
+  font-weight: 700;
   list-style-type: none;
   text-transform: uppercase;
 
@@ -48,31 +52,8 @@
   }
 }
 
-.logoWrapper {
-  background-clip: content-box, border-box;
-  background-origin: border-box;
-  border: double 3px transparent;
-  border-radius: 10px;
-  background-image: linear-gradient(var(--white), var(--white)), linear-gradient(to right, var(--pink), var(--orange));
-
-  &:hover {
-    background-image: linear-gradient(to right, var(--pink), var(--orange)), linear-gradient(to right, var(--pink), var(--orange));
-    cursor: pointer;
-  }
-}
-
 .logo {
-  caret-color: rgba(0, 0, 0, 0);
-  color: var(--black);
-  cursor: pointer;
-  font-size: 24px;
-  font-weight: 600;
-  padding: 2px 8px;
-  z-index: 100;
-}
-
-.logoWrapper:hover .logo {
-  color: var(--white);
+  height: 40px;
   cursor: pointer;
 }
 
@@ -84,5 +65,9 @@
   .logo {
     font-size: 30px;
     font-weight: 800;
+  }
+
+  .nav {
+    padding: 20px 50px;
   }
 }

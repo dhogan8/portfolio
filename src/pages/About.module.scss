@@ -1,12 +1,95 @@
+@import '../styles/global.scss';
+
 .container {
   display: grid;
   margin: auto;
   margin-top: 50px;
-  max-width: 500px;
+  max-width: 800px;
   padding: 40px;
 }
 
-.heading {
-  margin-bottom: 40px;
-  margin-top: 0;
+.icons {
+  font-family: var(--heading-text);
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas: 
+    'a b c'
+    'd e f';
+  gap: 10px;
+  justify-items: center;
+  margin-top: 30px;
+
+  svg {
+    height: 40px;
+    width: 40px;
+    margin: 20px 0;
+  }
+}
+
+.group {
+  align-items: center;
+  cursor: pointer;
+  justify-items: center;
+  display: grid;
+  gap: 10px;
+  grid-template-areas:
+    'icon'
+    'span';
+  grid-template-columns: 1fr;
+  position: relative;
+  top: 0;
+  transition: all .1s ease-in-out;
+
+  &:hover {
+    top: -5px;
+  }
+}
+
+.html {
+  color: #e34f26;
+}
+
+.css {
+  color: #1c72ba;
+}
+
+.javascript {
+  color: #f0db4f;
+}
+
+.typescript {
+  color: #007acc;
+}
+
+.bootstrap {
+  color: #553d7c;
+}
+
+.react {
+  color: #61dafb;
+}
+
+.npm {
+  color: #cc0000;
+}
+
+.perl {
+  color: #3a3c5b;
+}
+
+.go {
+  color: #05abd7;
+}
+
+@media only screen and (min-width: 600px) {
+  .icons svg {
+    height: 50px;
+    width: 50px;
+  }
+  
+  .group {
+    grid-template-areas: 'icon span';
+    grid-template-columns: 1fr 3fr;
+    justify-items: start;
+  }
 }

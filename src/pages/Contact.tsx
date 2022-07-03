@@ -68,58 +68,63 @@ const Contact = () => {
   }
 
   return (
-    <section id='contact' className={styles.container}>
-      <h1 className={styles.heading}>
-        Get in touch
-      </h1>
-      <form className={styles.form} onSubmit={handleSubmit}>
-        <input
-          id='name'
-          type='text'
-          name='_name'
-          placeholder='Name'
-          onChange={handleChange}
-          required
-          value={inputs.name}
-        />
-        <input
-          id='email'
-          type='email'
-          placeholder='Email'
-          onChange={handleChange}
-          required
-          value={inputs.email}
-        />
-        <textarea
-          id='message'
-          placeholder="What's on your mind?"
-          onChange={handleChange}
-          required
-          rows={8}
-          value={inputs.message}
-        />
-        <button
-          id='submit'
-          className={styles.button}
-          disabled={!inputs.email || !inputs.message || !inputs.name}
-          type='submit'
-        >
-          {status.submitting ? 'Sending...' : 'Send message'}
-        </button>
+    <section id='contact' className={styles.contact}>
+      <div className={styles.container}>
+        <h1 className={styles.heading}>
+          Get in touch
+        </h1>
+        <form className={styles.form} onSubmit={handleSubmit}>
+          <input
+            id='name'
+            className={styles.name}
+            type='text'
+            name='_name'
+            placeholder='Name'
+            onChange={handleChange}
+            required
+            value={inputs.name}
+          />
+          <input
+            id='email'
+            className={styles.email}
+            type='email'
+            placeholder='Email'
+            onChange={handleChange}
+            required
+            value={inputs.email}
+          />
+          <textarea
+            id='message'
+            className={styles.message}
+            placeholder="What's on your mind?"
+            onChange={handleChange}
+            required
+            rows={8}
+            value={inputs.message}
+          />
+          <button
+            id='submit'
+            className={styles.button}
+            disabled={!inputs.email || !inputs.message || !inputs.name}
+            type='submit'
+          >
+            {status.submitting ? 'Sending...' : 'Send message'}
+          </button>
 
-        {status.submitted  && (
-          <div className={styles.thanks}>
-            😁 Thanks for your message, I'll get back to you soon.
-          </div>
-        )}
+          {status.submitted  && (
+            <div className={styles.thanks}>
+              😁 Thanks for your message, I'll get back to you soon.
+            </div>
+          )}
 
-        {status.info.error && (
-          <div className={styles.error}>
-            😔 Your message was not sent. Please try again at a later time.
-          </div>
-        )}
+          {status.info.error && (
+            <div className={styles.error}>
+              😔 Your message was not sent. Please try again at a later time.
+            </div>
+          )}
 
-      </form>
+        </form>
+      </div>
     </section>
   )
 };
