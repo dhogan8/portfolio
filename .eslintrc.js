@@ -66,6 +66,7 @@ module.exports = {
       modules: true,
     },
     ecmaVersion: 6,
+    requireConfigFile: false,
     sourceType: 'module',
   },
   plugins: [
