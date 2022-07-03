@@ -46,7 +46,7 @@ const About = () => {
         <p>
           I&apos;m still a newbie to the coding world. I don&apos;t have much
           work to show yet, but I&apos;m constantly trying to learn and enhance
-          my skills. In collaboration with some skilled colleagues, you can find
+          my skills. In collaboration with my skilled colleagues, you can find
           some of my contributions to MaxMind&apos;s sites:
           {' '}
           <a

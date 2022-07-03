@@ -12,7 +12,7 @@ const Footer = () => {
 
   return (
     <footer
-      className={styles.footer}
+      className='footer'
       id="footer"
     >
       <div
@@ -49,11 +49,6 @@ const Footer = () => {
             <FaEnvelopeSquare />
           </a>
         </div>
-      </div>
-      <div
-        className={styles.copyright}
-      >
-        © 2022 Dallas Hogan
       </div>
     </footer>
   );

@@ -1,10 +1,10 @@
 @import '../styles/global.scss';
 .up {
-  bottom: 1rem;
+  bottom: 10px;
   display: grid;
   place-items: end;
   position: fixed;
-  right: 0.5rem;
+  right: 10px;
   visibility: hidden;
   opacity: 0;
   transition: visibility 0s, opacity 1.0s linear;
@@ -30,9 +30,4 @@
 .item__visible {
   visibility: visible;
   opacity: 1;
-}
-
-.item__invert {
-  color: var(--primary-text-color) !important;
-  background-color: var(--white) !important;
 }
