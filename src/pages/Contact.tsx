@@ -1,124 +1,160 @@
+import axios from 'axios';
 import React, { useState } from 'react';
-import axios from 'axios'
 
 import styles from './Contact.module.scss';
 
 const Contact = () => {
 
-  const [status, setStatus] = useState({
+  const [
+    status,
+    setStatus,
+  ] = useState({
+    info: {
+      error: false,
+      msg: null,
+    },
     submitted: false,
     submitting: false,
-    info: { error: false, msg: null }
   });
 
-  const [inputs, setInputs] = useState({
-    name: '',
+  const [
+    inputs,
+    setInputs,
+  ] = useState({
     email: '',
-    message: ''
+    message: '',
+    name: '',
   });
 
   const handleServerResponse = (ok: boolean, msg: any) => {
     if (ok) {
       setStatus({
-        info: { error: false, msg: msg },
+        info: {
+          error: false,
+          msg: msg,
+        },
         submitted: true,
         submitting: false,
-      })
+      });
       setInputs({
-        name: '',
         email: '',
-        message: ''
-      })
+        message: '',
+        name: '',
+      });
     } else {
       setStatus({
-        info: { error: true, msg: msg },
+        info: {
+          error: true,
+          msg: msg,
+        },
         submitted: false,
         submitting: false,
-      })
+      });
     }
-  }
+  };
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    e.persist()
-    setInputs(prev => ({
-      ...prev,
-      [e.target.id]: e.target.value
-    }))
-    setStatus({
-      submitted: false,
-      submitting: false,
-      info: { error: false, msg: null }
-    })
-  }
+  const handleChange =
+    (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+      e.persist();
+      setInputs(prev => ({
+        ...prev,
+        [e.target.id]: e.target.value,
+      }));
+      setStatus({
+        info: {
+          error: false,
+          msg: null,
+        },
+        submitted: false,
+        submitting: false,
+      });
+    };
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault()
-    setStatus(prevStatus => ({ ...prevStatus, submitting: true }))
+    e.preventDefault();
+    setStatus(prevStatus => ({
+      ...prevStatus,
+      submitting: true,
+    }));
     axios({
+      data: inputs,
       method: 'POST',
       url: 'https://formspree.io/xnqwykdo',
-      data: inputs
     })
       .then(response => {
-        handleServerResponse(true, response.data)
+        handleServerResponse(true, response.data);
       })
       .catch(error => {
-        handleServerResponse(false, error.response.data.error)
-      })
-  }
+        handleServerResponse(false, error.response.data.error);
+      });
+  };
 
   return (
-    <section id='contact' className={styles.contact}>
-      <div className={styles.container}>
-        <h1 className={styles.heading}>
+    <section
+      className={styles.contact}
+      id='contact'
+    >
+      <div
+        className={styles.container}
+      >
+        <h1
+          className={styles.heading}
+        >
           Get in touch
         </h1>
-        <form className={styles.form} onSubmit={handleSubmit}>
+        <form
+          className={styles.form}
+          onSubmit={handleSubmit}
+        >
           <input
-            id='name'
             className={styles.name}
-            type='text'
+            id='name'
             name='_name'
-            placeholder='Name'
             onChange={handleChange}
+            placeholder='Name'
             required
+            type='text'
             value={inputs.name}
           />
           <input
-            id='email'
             className={styles.email}
-            type='email'
-            placeholder='Email'
+            id='email'
             onChange={handleChange}
+            placeholder='Email'
             required
+            type='email'
             value={inputs.email}
           />
           <textarea
-            id='message'
             className={styles.message}
-            placeholder="What's on your mind?"
+            id='message'
             onChange={handleChange}
+            placeholder="What's on your mind?"
             required
             rows={8}
             value={inputs.message}
           />
           <button
-            id='submit'
             className={styles.button}
             disabled={!inputs.email || !inputs.message || !inputs.name}
+            id='submit'
             type='submit'
           >
             {status.submitting ? 'Sending...' : 'Send message'}
           </button>
 
           {status.submitted  && (
-            <div className={styles.thanks}>
-              😁 Thanks for your message, I'll get back to you soon.
+            <div
+              className={styles.thanks}
+            >
+              😁 Thanks for your message, I will get back to you soon.
             </div>
           )}
 
           {status.info.error && (
-            <div className={styles.error}>
+            <div
+              className={styles.error}
+            >
               😔 Your message was not sent. Please try again at a later time.
             </div>
           )}
@@ -126,7 +162,7 @@ const Contact = () => {
         </form>
       </div>
     </section>
-  )
+  );
 };
 
 export default Contact;

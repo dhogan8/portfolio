@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import classNames from 'classnames';
 import { FiChevronUp } from 'react-icons/fi';
-  
+
 import styles from './ScrollButton.module.scss';
 
 const ScrollButton = () => {
   const [visible, setVisible] = useState(false)
   const [color, setColor] = useState(false);
-  
+
   const toggleVisible = () => {
     const scrolled = document.documentElement.scrollTop;
     if (scrolled > 300){
@@ -15,7 +15,7 @@ const ScrollButton = () => {
     } else if (scrolled <= 300){
       setVisible(false)
     }
-    
+
     if (scrolled >= 1636) {
       setColor(true)
     } else {
@@ -26,7 +26,7 @@ const ScrollButton = () => {
   window.addEventListener('scroll', toggleVisible);
 
   return (
-      <div 
+      <div
         id='up'
         className={classNames(
           styles.up,
@@ -36,7 +36,7 @@ const ScrollButton = () => {
         )}
       >
         <a href='#'>
-          <FiChevronUp 
+          <FiChevronUp
             className={classNames(
               {
                 [styles['item__invert']]: color,
@@ -47,5 +47,5 @@ const ScrollButton = () => {
       </div>
   );
 }
-  
+
 export default ScrollButton;

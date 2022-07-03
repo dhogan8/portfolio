@@ -1,11 +1,11 @@
 import React from 'react';
 
-import About from '../pages/About';
-import Contact from '../pages/Contact';
 import Footer from '../components/Footer';
-import Intro from '../pages/Intro';
 import Navbar from '../components/Navbar';
 import ScrollButton from '../components/ScrollButton';
+import About from '../pages/About';
+import Contact from '../pages/Contact';
+import Intro from '../pages/Intro';
 
 const Layout = () => {
   return (
@@ -17,7 +17,7 @@ const Layout = () => {
       <ScrollButton />
       <Footer />
     </>
-  )
-}
+  );
+};
 
 export default Layout;

@@ -11,40 +11,52 @@ import styles from './Footer.module.scss';
 const Footer = () => {
 
   return (
-    <footer 
-      id="footer"
+    <footer
       className={styles.footer}
+      id="footer"
     >
-      <div className={styles.icons}>
-        <div className={styles.icon}>
+      <div
+        className={styles.icons}
+      >
+        <div
+          className='icon'
+        >
           <a
             href='https://www.linkedin.com/in/dallas-hogan-654825126/'
             rel="nofollow noopener noreferrer"
             target="_blank"
-            >
+          >
             <FaLinkedin />
           </a>
         </div>
-        <div className={styles.icon}>
+        <div
+          className='icon'
+        >
           <a
             href='https://github.com/dhogan8'
             rel="nofollow noopener noreferrer"
             target="_blank"
-            >
+          >
             <FaGithubSquare />
           </a>
         </div>
-        <div className={styles.icon}>
-          <a href='#contact'>
+        <div
+          className='icon'
+        >
+          <a
+            href='#contact'
+          >
             <FaEnvelopeSquare />
           </a>
         </div>
       </div>
-      <div className={styles.copyright}>
+      <div
+        className={styles.copyright}
+      >
         © 2022 Dallas Hogan
       </div>
     </footer>
-  )
-}
+  );
+};
 
 export default Footer;

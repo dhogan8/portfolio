@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
-import logo from './logo512.png'
+
+import logo from './logo512.png';
 
 import styles from './Navbar.module.scss';
 
@@ -30,24 +31,46 @@ const Navbar = () => {
 
   return (
     <>
-      <div id='bar' className={styles.bar} />
-      <nav id='nav' className={styles.nav}>
-        <div id='logo' className={styles.logoWrapper}>
-          <a href='#'>
-            <img className={styles.logo} src={logo} />
+      <div
+        className={styles.bar}
+        id='bar'
+      />
+      <nav
+        className={styles.nav}
+        id='nav'
+      >
+        <div
+          className='logoWrapper'
+          id='logo'
+        >
+          <a
+            href='#'
+          >
+            <img
+              className={styles.logo}
+              src={logo}
+            />
           </a>
         </div>
-        <div className={styles.list}>
-          <span className={styles.item}>
+        <div
+          className={styles.list}
+        >
+          <span
+            className={styles.item}
+          >
             <a
-              href='#about'>
-                About
+              href='#about'
+            >
+              About
             </a>
           </span>
-          <span className={styles.item}>
+          <span
+            className={styles.item}
+          >
             <a
-              href='#contact'>
-                Contact
+              href='#contact'
+            >
+              Contact
             </a>
           </span>
         </div>

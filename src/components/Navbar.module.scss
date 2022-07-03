@@ -57,10 +57,6 @@
   cursor: pointer;
 }
 
-.active {
-  border-image: linear-gradient(to right, var(--pink), var(--orange)) 1;
-}
-
 @media only screen and (min-width: 400px) {
   .logo {
     font-size: 30px;
