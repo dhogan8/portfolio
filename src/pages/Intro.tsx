@@ -13,7 +13,7 @@ const Intro = () => (
         className={styles.container}
       >
         <div
-          className={styles.heroWrapper}
+          className='heroWrapper'
         >
           <div
             className={styles.hero}
@@ -29,15 +29,15 @@ const Intro = () => (
               Frontend Engineer
             </div>
           </div>
-          <div
-            className={styles.down}
+        </div>
+        <div
+          className={styles.down}
+        >
+          <a
+            href='#about'
           >
-            <a
-              href='#about'
-            >
-              <FiChevronsDown />
-            </a>
-          </div>
+            <FiChevronsDown />
+          </a>
         </div>
       </div>
     </section>
