@@ -26,7 +26,7 @@ const Contact = () => {
     name: '',
   });
 
-  const handleServerResponse = (ok: boolean, msg: any) => {
+  const handleServerResponse = (ok: boolean, msg: null) => {
     if (ok) {
       setStatus({
         info: {
