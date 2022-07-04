@@ -6,10 +6,6 @@
   margin-bottom: 10px;
   transition: all 0.1s ease-in-out;
   width: 40px;
-
-  &:hover {
-    color: rgba(33, 36, 39, 0.8);
-  }
 }
 
 .icons {
@@ -25,4 +21,14 @@
   a {
     border-bottom: none;
   }
+
+  .icon {
+    position: relative;
+    top: 0;
+  }
+
+  .icon:hover {
+    top: -5px;
+  }
+
 }

@@ -19,7 +19,7 @@ const Footer = () => {
         className={styles.icons}
       >
         <div
-          className='icon'
+          className={styles.icon}
         >
           <a
             href='https://www.linkedin.com/in/dallas-hogan-654825126/'
@@ -30,7 +30,7 @@ const Footer = () => {
           </a>
         </div>
         <div
-          className='icon'
+          className={styles.icon}
         >
           <a
             href='https://github.com/dhogan8'
@@ -41,7 +41,7 @@ const Footer = () => {
           </a>
         </div>
         <div
-          className='icon'
+          className={styles.icon}
         >
           <a
             href='#contact'
