@@ -12,7 +12,7 @@ const Footer = () => {
 
   return (
     <footer
-      className='footer'
+      className={styles.footer}
       id="footer"
     >
       <div
