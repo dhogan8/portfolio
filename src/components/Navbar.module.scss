@@ -31,7 +31,8 @@
   display: flex;
   font-family: var(--heading-text);
   gap: 20px;
-  justify-content: flex-end;
+  grid-area: menu;
+  justify-content: center;
   margin: 0;
 }
 
@@ -53,14 +54,20 @@
 }
 
 .logo {
-  height: 40px;
-  cursor: pointer;
+  background-color: var(--primary-text-color);
+  border-radius: 5px;
+  color: var(--white);
+  font-size: 30px;
+  font-weight: 700;
+  grid-area: logo;
+  justify-content: flex-start;
+  padding: 2px 8px;
+  text-decoration: none;
 }
 
-@media only screen and (min-width: 400px) {
-  .logo {
-    font-size: 30px;
-    font-weight: 800;
+@media only screen and (min-width: 420px) {
+  .list {
+    justify-content: flex-end;
   }
 
   .nav {

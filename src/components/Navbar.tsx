@@ -1,7 +1,5 @@
 import React, { useEffect } from 'react';
 
-import logo from './logo512.png';
-
 import styles from './Navbar.module.scss';
 
 const Navbar = () => {
@@ -39,19 +37,12 @@ const Navbar = () => {
         className={styles.nav}
         id='nav'
       >
-        <div
-          className='logoWrapper'
-          id='logo'
+        <a
+          className={styles.logo}
+          href='#'
         >
-          <a
-            href='#'
-          >
-            <img
-              className={styles.logo}
-              src={logo}
-            />
-          </a>
-        </div>
+          D
+        </a>
         <div
           className={styles.list}
         >

@@ -1,36 +1,56 @@
-import * as React from 'react';
+import classNames from 'classnames';
+import React, { useEffect } from 'react';
 import { FiChevronsDown } from 'react-icons/fi';
 
 import styles from './Intro.module.scss';
 
-const Intro = () => (
-  <>
-    <section
-      className={styles.intro}
-      id='intro'
-    >
-      <div
-        className={styles.container}
+const Intro = () => {
+  const [
+    showBtn,
+    setShowBtn,
+  ] = React.useState(false);
+  useEffect(()=>{
+    setTimeout(function() {
+      setShowBtn(true);
+    }, 2500);
+  },
+  []);
+
+  return (
+    <>
+      <section
+        className={styles.intro}
+        id='intro'
       >
         <div
-          className={styles.heroWrapper}
+          className={styles.container}
         >
           <div
-            className={styles.hero}
+            className='heroWrapper'
           >
             <div
-              className={styles.heroName}
+              className={styles.hero}
             >
-              Hi, I&apos;m Dallas.
-            </div>
-            <div
-              className={styles.heroTitle}
-            >
-              Frontend Engineer
+              <div
+                className={styles.heroName}
+              >
+                Hi, I&apos;m Dallas.
+              </div>
+              <div
+                className={styles.heroTitle}
+              >
+                Frontend Engineer
+              </div>
             </div>
           </div>
           <div
-            className={styles.down}
+            className={classNames(
+              styles.down,
+              {
+                [styles['down__show']]: showBtn,
+              },
+            )}
+            id='down'
           >
             <a
               href='#about'
@@ -39,9 +59,9 @@ const Intro = () => (
             </a>
           </div>
         </div>
-      </div>
-    </section>
-  </>
-);
+      </section>
+    </>
+  );
+};
 
 export default Intro;
