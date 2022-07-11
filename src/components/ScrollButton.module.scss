@@ -1,26 +1,29 @@
 @import '../styles/global.scss';
 
 .up {
-  bottom: 10px;
+  background-color: transparent;
+  bottom: 0;
   display: grid;
   place-items: end;
   position: fixed;
-  right: 10px;
+  right: 0;
   visibility: hidden;
   opacity: 0;
   transition: visibility 0s, opacity 1.0s linear;
 
+  a {
+    background-color: transparent;
+  }
+
   svg {
-    background-color: var(--primary-text-color);
     border-radius: 50px;
-    color: var(--white);
-    height: 30px;
-    margin: 20px;
+    fill: var(--primary-text-color);
+    height: 40px;
     padding: 5px;
-    top: 0;
+    margin: 10px;
     transition: all 0.2s ease-in-out;
-    width: 30px;
-  
+    width: 40px;
+
     &:hover {
       cursor: pointer;
       top: -5px;

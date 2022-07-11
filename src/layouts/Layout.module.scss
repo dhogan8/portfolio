@@ -1,0 +1,61 @@
+.moon,
+.sun {
+  background-color: transparent;
+  fill: gold;
+  height: 15px;
+  width: 15px;
+}
+
+.toggleWrapper {
+  display: none;
+}
+
+.toggleLabel {
+  display: block;
+  border-radius: 50px;
+  cursor: pointer;
+  overflow: hidden;
+  position: fixed;
+  right: 30px;
+  top: 35px;
+  width: 60px;
+  z-index: 100;
+
+  &:after {
+    background: whitesmoke;
+    border-radius: 90px;
+    content: '';
+    height: 23px;
+    left: 3px;
+    position: absolute;
+    top: 3px;
+    width: 23px;
+    transition: 0.3s;
+  }
+}
+
+.toggleWrapper:checked + .toggleLabel:after {
+	left: calc(100% - 3px);
+	transform: translateX(-100%);
+}
+
+.toggleWrapper:active:after {
+	width: 130px;
+}
+
+.toggle {
+  background: linear-gradient(90deg, #2D2F39 0%, #1F2027 100%);
+  border: 2px solid var(--toggle-border);
+  border-radius: 50px;
+  display: grid;
+  grid-template-areas: 'sun moon';
+  padding: 5px;
+  place-items: center;
+  width: 46px;
+}
+
+@media only screen and (min-width: 420px) {
+  .toggleLabel {
+    right: 50px;
+  }
+}

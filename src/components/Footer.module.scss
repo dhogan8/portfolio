@@ -13,9 +13,8 @@
   gap: 10px;
   grid-template-areas: 'a b c';
   max-width: 200px;
-  place-items: center;
-  margin: auto;
-  margin-bottom: 20px;
+  margin: 20px;
+  margin-bottom: 0;
   max-width: 100px;
 
   a {
@@ -31,4 +30,10 @@
     top: -5px;
   }
 
+}
+
+@media only screen and (min-width: 420px) {
+  .icons {
+    margin: auto;
+  }
 }

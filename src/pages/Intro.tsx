@@ -26,7 +26,7 @@ const Intro = () => {
           className={styles.container}
         >
           <div
-            className='heroWrapper'
+            className={styles.heroWrapper}
           >
             <div
               className={styles.hero}
