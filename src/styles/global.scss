@@ -1,27 +1,31 @@
 :root {
-  --primary-text-color: #212427;
-  --black: #000;
-  --mute-gray: #d3d3d3;
+  --mute-gray: #e6e6e6;
   --orange: #ff9472;
   --pink: #f2709c;
-  --white: #f7fafc;
+  --primary-text-color: #212427;
+  --primary-bg-color: #f7fafc;
+  --nav-color: #f8f8f8;
+  --toggle-border: #2d2f39;
 
   --body-text: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell,Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   --heading-text: 'Poppins', sans-serif;
 
-  --box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  --box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+}
+
+[data-theme='dark'] {
+  --primary-text-color: #f7fafc;
+  --primary-bg-color: #212427;
+  --nav-color: #171818;
 }
 
 * {
-  transition: all 0.1s ease-in-out;
-}
-
-body {
-  background-color: var(--white);
+  background-color: var(--primary-bg-color);
   color: var(--primary-text-color);
   font-family: var(--body-text);
   font-size: 18px;
   margin: 0;
+  transition: all 0.1s ease-in-out;
 }
 
 h1,
@@ -36,18 +40,23 @@ h6 {
 
 h1 {
   font-size: 40px;
+  margin-bottom: 20px;
 }
 
 html {
   scroll-behavior: smooth;
 }
 
+p {
+  margin-bottom: 20px;
+}
+
 section {
   scroll-margin-top: 60px;
 
   a {
-    color: var(--primary-text-color);
     border-bottom: 2px solid var(--pink);
+    color: var(--primary-text-color);
     font-weight: 500;
     text-decoration: none;
   }

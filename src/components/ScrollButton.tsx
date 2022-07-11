@@ -1,6 +1,6 @@
 import classNames from 'classnames';
 import React, { useState } from 'react';
-import { FiChevronUp } from 'react-icons/fi';
+import { BiChevronUpCircle } from 'react-icons/bi';
 
 import styles from './ScrollButton.module.scss';
 
@@ -34,7 +34,7 @@ const ScrollButton = () => {
       <a
         href='#'
       >
-        <FiChevronUp />
+        <BiChevronUpCircle />
       </a>
     </div>
   );

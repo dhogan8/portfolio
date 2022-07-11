@@ -6,8 +6,8 @@
 }
 
 .container {
-  background-color: #F5F5F5;
-  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  background-color: var(--nav-color);
+  box-shadow: var(--box-shadow);
   border-radius: 5px;
   display: grid;
   margin: 50px 0 200px 0;
@@ -18,10 +18,13 @@
 }
 
 .heading {
+  background-color: transparent;
+  margin-bottom: 20px;
   margin-top: 0;
 }
 
 .form {
+  background-color: var(--nav-color);
   display: grid;
   grid-template-areas:
     'name'
@@ -32,7 +35,7 @@
 }
 
 input, textarea {
-  background-color: #fff;
+  background-color: var(--mute-gray);
   border: transparent;
   border-bottom: 2px solid transparent;
   border-radius: 5px;
@@ -85,11 +88,12 @@ input, textarea {
 
 .button:disabled {
   cursor: not-allowed;
-  opacity: 0.65; 
+  opacity: 0.65;
 }
 
 .error,
 .thanks {
+  background-color: transparent;
   font-family: var(--heading-text);
   margin: auto;
   text-align: center;
