@@ -16,10 +16,10 @@
   display: grid;
   grid-template-areas: 'logo menu';
   grid-template-columns: max-content 1fr;
-  gap: 20px;
+  gap: 0;
   height: 40px;
   margin-top: 10px;
-  padding: 20px;
+  padding: 10px;
   position: fixed;
   left: 0;
   right: 0;
@@ -31,11 +31,11 @@
   background-color: transparent;
   display: flex;
   font-family: var(--heading-text);
-  gap: 20px;
+  gap: 10px;
   grid-area: menu;
   justify-content: center;
   margin: 0;
-  margin-right: 70px;
+  margin-right: 60px;
   place-items: center;
 }
 
@@ -62,7 +62,7 @@
   background-color: var(--primary-text-color);
   border-radius: 5px;
   color: var(--primary-bg-color);
-  font-size: 30px;
+  font-size: 25px;
   font-weight: 700;
   grid-area: logo;
   justify-content: flex-start;
@@ -72,10 +72,15 @@
 
 @media only screen and (min-width: 420px) {
   .list {
+    gap: 20px;
     justify-content: flex-end;
   }
 
+  .logo {
+    font-size: 30px;
+  }
+
   .nav {
-    padding: 20px 50px;
+    padding: 10px 50px;
   }
 }

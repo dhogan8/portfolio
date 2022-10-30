@@ -1,3 +1,13 @@
+.base {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.content {
+  flex-grow: 1;
+}
+
 .moon,
 .sun {
   background-color: transparent;
@@ -16,8 +26,8 @@
   cursor: pointer;
   overflow: hidden;
   position: fixed;
-  right: 30px;
-  top: 35px;
+  right: 15px;
+  top: 26px;
   width: 60px;
   z-index: 100;
 
@@ -55,7 +65,7 @@
 }
 
 @media only screen and (min-width: 420px) {
-  .toggleLabel {
-    right: 50px;
-  }
+  // .toggleLabel {
+  //   right: 30px;
+  // }
 }
