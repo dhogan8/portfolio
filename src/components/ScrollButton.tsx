@@ -1,6 +1,7 @@
 import classNames from 'classnames';
 import React, { useState } from 'react';
 import { BiChevronUpCircle } from 'react-icons/bi';
+import { NavHashLink } from 'react-router-hash-link';
 
 import styles from './ScrollButton.module.scss';
 
@@ -31,11 +32,11 @@ const ScrollButton = () => {
       )}
       id='up'
     >
-      <a
-        href='#'
+      <NavHashLink
+        to="/#"
       >
         <BiChevronUpCircle />
-      </a>
+      </NavHashLink>
     </div>
   );
 };

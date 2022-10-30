@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { NavHashLink } from 'react-router-hash-link';
 
 import styles from './Navbar.module.scss';
 
@@ -37,32 +38,41 @@ const Navbar = () => {
         className={styles.nav}
         id='nav'
       >
-        <a
+        <NavHashLink
           className={styles.logo}
-          href='#'
+          to="/#"
         >
           D
-        </a>
+        </NavHashLink>
         <div
           className={styles.list}
         >
           <span
             className={styles.item}
           >
-            <a
-              href='#about'
+            <NavHashLink
+              to="/#about"
             >
               About
-            </a>
+            </NavHashLink>
           </span>
           <span
             className={styles.item}
           >
             <a
-              href='#contact'
+              href='/work'
+            >
+              Work
+            </a>
+          </span>
+          <span
+            className={styles.item}
+          >
+            <NavHashLink
+              to="/#contact"
             >
               Contact
-            </a>
+            </NavHashLink>
           </span>
         </div>
       </nav>
