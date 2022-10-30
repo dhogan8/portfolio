@@ -1,5 +1,7 @@
 import React  from 'react';
-import { FaTools } from 'react-icons/fa';
+
+import Laptop from '../assets/images/laptop.png';
+import Phone from '../assets/images/phone2.png';
 
 import styles from './Work.module.scss';
 
@@ -9,19 +11,18 @@ const Work = () => {
       className={styles.container}
     >
       <div
-        className={styles.construction}
+        className={styles.title}
       >
-        <div
-          className={styles.tools}
-        >
-          <FaTools />
-        </div>
-        <div
-          className={styles.description}
-        >
-          Coming soon!
-        </div>
+        My Work
       </div>
+      <img
+        className={styles.laptop}
+        src={Laptop}
+      />
+      <img
+        className={styles.phone}
+        src={Phone}
+      />
     </div>
 
   );

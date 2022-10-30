@@ -1,11 +1,11 @@
 import React  from 'react';
 
-import { ReactComponent as Bootstrap } from '../assets/svg/bootstrap.svg';
-import { ReactComponent as Css } from '../assets/svg/css.svg';
-import { ReactComponent as Html } from '../assets/svg/html.svg';
-import { ReactComponent as Javascript } from '../assets/svg/javascript.svg';
-import { ReactComponent as ReactJs } from '../assets/svg/react.svg';
-import { ReactComponent as Typescript } from '../assets/svg/typescript.svg';
+import { ReactComponent as Bootstrap } from '../assets/images/bootstrap.svg';
+import { ReactComponent as Css } from '../assets/images/css.svg';
+import { ReactComponent as Html } from '../assets/images/html.svg';
+import { ReactComponent as Javascript } from '../assets/images/javascript.svg';
+import { ReactComponent as ReactJs } from '../assets/images/react.svg';
+import { ReactComponent as Typescript } from '../assets/images/typescript.svg';
 
 import styles from './About.module.scss';
 
